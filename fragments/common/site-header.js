@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollY = window.scrollY || document.documentElement.scrollTop || 0;
         document.documentElement.classList.add('nav-open');
         document.body.classList.add('scroll-lock');
-        document.body.style.top = `-${scrollY}px`;
+        // document.body.style.top = `-${scrollY}px`;
     }
     
     function unlockScroll() {
