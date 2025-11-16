@@ -1,0 +1,96 @@
+/* === NAVIGATION === */
+
+body > nav {
+    box-shadow: 0px 1px 3px 1px #d2d2d2;
+    border-bottom: 1px solid #cacaca;
+}
+
+body > nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    list-style: none;
+}
+
+body > nav ul li {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+}
+
+body > nav ul li:not(:last-child)::after {
+    content: "◯";
+}
+
+body > nav ul li a {
+    padding: 1rem 1rem;
+    display: block;
+    font-size: inherit;
+    text-decoration: none;
+    color: #de00ff;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+body > nav ul li a:visited {
+    color: inherit;
+}
+
+/* === MEDIA SCREEN === */
+
+
+@media (max-width: 900px) {
+    body > nav ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body > nav {
+        padding: 10px;
+    }
+    body > nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    body > nav ul li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #dec5f3;
+    }
+    body > nav ul li:not(:last-child)::after {
+        display: none;
+    }
+    body > nav ul li a {
+        width: 100%;
+    }
+}
+
+/* === MEDIA SCREEN & DARK MODE === */
+
+@media screen and (prefers-color-scheme: dark) {
+    body > nav {
+        box-shadow: none;
+        background: #32283c;
+        border-bottom: 1px solid #814242;
+    }
+    body > nav ul li {
+        border-bottom: 1px solid #682a5b;
+    }
+    body > nav ul li a {
+        color: #de00ff;
+        border-bottom: none;
+    }
+    body > nav ul li:not(:last-child)::after {
+        content: "◯";
+        color: #8859b4;
+        text-rendering: geometricprecision;
+    }
+}
+
+
+

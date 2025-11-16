@@ -1,0 +1,216 @@
+/* === Font Stacks === */
+:root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', 'Source Sans 3', system-ui, sans-serif;
+    --font-mono: 'Source Code Pro', SFMono-Regular, Consolas, monospace;
+
+    --text-base-size: 1rem;
+    --text-line-height: 1.6;
+    --text-color: #111;
+}
+
+/* === Reset Margins and Font Settings === */
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-base-size);
+    line-height: var(--text-line-height);
+    color: var(--text-color);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1; /* Enable stylistic set 1 by default for Inter */
+    font-variant-ligatures: common-ligatures contextual;
+    font-kerning: normal;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+    font-feature-settings: "liga" 1, "kern" 1, "ss02" 1; /* Optional stylistic set for flair */
+    font-variant-ligatures: common-ligatures;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* === Paragraphs & Text Elements === */
+p, ul, ol, dl, blockquote, pre, table, figure, fieldset, legend {
+    margin: 0;
+}
+
+p {
+    font-family: var(--font-sans);
+    text-align: justify;
+    hyphens: auto;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+a, a:visited {
+    color: #0055ff;
+}
+
+/* === Lists === */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+/* ul {
+    list-style: disc outside;
+} */
+
+ol {
+    list-style: decimal outside;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* === Blockquotes === */
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    margin-left: 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+/* === Code & Pre === */
+code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-size: 0.95em;
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+
+    font-feature-settings: "zero" 1, "tnum" 1, "kern" 1;
+    font-variant-numeric: tabular-nums slashed-zero;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #f5f5f5;
+}
+
+/* === Tables === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    margin-bottom: 1.25rem;
+
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    font-variant-numeric: tabular-nums lining-nums;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* === Forms === */
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* === Others === */
+strong, b {
+    font-weight: 600;
+}
+
+em, i {
+    font-style: italic;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+/* === MEDIA SCREEN & DARK MODE === */
+
+@media screen and (prefers-color-scheme: dark) {
+    /* === Font Stacks === */
+    :root {
+        --text-color: #eee; /* Bright text for dark backgrounds */
+    }
+
+    body {
+        background: #121212; /* Standard dark background */
+    }
+
+    /* === Blockquotes === */
+    blockquote {
+        border-left: 4px solid #555; /* Dimmed border for subtle separation */
+        color: #bbb; /* Lighter than standard text for emphasis */
+    }
+
+    /* === Code & Pre === */
+    code, pre, kbd, samp {
+        background: #1e1e1e; /* Dark gray background for code readability */
+        color: #ddd; /* Light foreground for contrast */
+    }
+
+    pre {
+        background: #1e1e1e; /* Ensure uniform dark tone */
+    }
+
+    th, td {
+        border-bottom: 1px solid #444; /* Softer than light-mode but still visible */
+    }
+
+    /* === Others === */
+    hr {
+        border-top: 1px solid #333; /* Subtle divider line */
+    }
+
+    a, a:visited {
+        color: #a78bfa; /* Soft lavender (like Tailwind's purple-400) */
+    }
+}

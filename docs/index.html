@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Colbyn Wadman – Systems‑oriented Software & Tooling</title>
+  <meta name="description" content="Colbyn Wadman's personal websites">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Colbyn Wadman">
+  <meta property="og:description" content=
+  "Deep‑tech projects in ML image coding, custom note‑tools, compilers, and functional type systems.">
+  <meta property="og:url" content="https://colbyn.com/">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap"
+  rel="stylesheet">
+  <style>
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+  </style>
+  <link rel="stylesheet" href="templates/default/typography.css">
+  <link rel="stylesheet" href="templates/default/layout.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Colbyn Wadman",
+  "url": "https://colbyn.com",
+  "jobTitle": "Software Developer",
+  "description": "Software developer building fast, low-level tools for media processing, compilers, and developer workflows — with a focus on performance, clarity, and code quality.",
+  "sameAs": [
+    "https://github.com/colbyn",
+    "https://www.youtube.com/@colbyn-wadman",
+    "https://imager.io",
+    "https://medium.com/@colbyn"
+  ],
+  "knowsAbout": [
+    "Functional programming and type systems",
+    "Neural image compression and codec design",
+    "Minimal note-taking systems and cognitive tools",
+    "Compiler construction and program transformations",
+    "Rust, Swift, and type-driven system design",
+    "Web semantics and interface minimalism"
+  ],
+  "knowsLanguage": ["en"],
+  "hasPart": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Imager",
+      "alternateName": "imager.io",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Cross-platform",
+      "url": "https://imager.io",
+      "codeRepository": "https://github.com/imager-io",
+      "creator": {
+        "@type": "Person",
+        "name": "Colbyn Wadman",
+        "url": "https://colbyn.com"
+      },
+      "maintainer": {
+        "@type": "Person",
+        "name": "Colbyn Wadman",
+        "url": "https://colbyn.com"
+      },
+      "description": "A modular, Rust-based image optimization platform with ML-guided visual metrics, outperforming commercial tools like kraken.io. Features native Node.js bindings, CLI tooling, and deep integration with FFmpeg, WebP, x264, and VMAF.",
+      "programmingLanguage": ["Rust", "JavaScript"],
+      "softwareVersion": "1.0",
+      "featureList": [
+        "Rust encoder with machine-learned perceptual metrics",
+        "Node.js bindings via Rust FFI",
+        "Benchmark suite outperforming kraken.io and jpegmini",
+        "Support for WebP, JPEG, x264, and VMAF-based evaluation"
+      ],
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "Article",
+      "name": "Modern Image Optimization for 2020: Issues, Solutions, and Open Source",
+      "author": {
+        "@type": "Person",
+        "name": "Colbyn Wadman"
+      },
+      "url": "https://medium.com/@colbyn/modern-image-optimization-for-2020-issues-solutions-and-open-source-solutions-543af00e3e51",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Medium"
+      }
+    }
+  ]
+  }
+  </script>
+  <link rel="stylesheet" type="text/css" href="pages/index.css">
+  <style>
+  header.site-banner {
+    padding: 1rem 0rem;
+    border: 1px solid;
+    border-color: var(--landing-border-color);
+    background-color: var(--landing-fg-color);
+    color: #6d6d6d;
+    margin: 0 var(--landing-margin-length);
+  }
+
+  header.site-banner h1 {
+    color: inherit;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    text-align: center;
+    display: flex;
+    overflow-wrap: anywhere;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    font-size: clamp(4rem, 12vw + 1rem, 10rem);
+    letter-spacing: clamp(0.05em, 1vw, 0.6em);
+  }
+  </style>
+  <style>
+  footer.wip-banner {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    border: 0.5px solid;
+    border-color: var(--landing-border-color);
+    background-color: var(--landing-fg-color);
+    color: #5f4c4c;
+    margin: 0 var(--landing-margin-length);
+    margin-top: auto;
+    padding: 0.5rem;
+  }
+
+  footer.wip-banner p {
+    color: inherit;
+  }
+
+  footer.wip-banner p.large {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 2vw + 1.0rem, 4rem);
+    white-space-collapse: break-spaces;
+  }
+
+  footer.wip-banner p.extra {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  @media screen and (prefers-color-scheme: light) {
+    footer.wip-banner p.large {
+        opacity: 0.7;
+    }
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    footer.wip-banner {
+        color: #adacac;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header class="site-banner">
+    <h1>Colbyn Wadman</h1>
+  </header>
+  <section class="wrapper">
+    <article>
+      <h2 class="title">Contact</h2>
+      <ul class="contact-options">
+        <li class="contact"><code>hello@colbyn.com</code></li>
+        <li class="contact">
+          <a href="https://colbyn.com">colbyn.com</a>
+        </li>
+        <li class="contact"><code>801-367-4487</code></li>
+        <li class="contact">
+          <a href="https://github.com/colbyn">github.com/colbyn</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  <main>
+    <section class="wrapper">
+      <h2 class="title">Quick Links</h2>
+      <article class="panel">
+        <h3 class="title">Professional</h3>
+        <ul>
+          <li>
+            <p class="layout"><a href="https://github.com/colbyn">github.com/colbyn</a> <span>My GitHub profile. In
+            2019 I was among the top percentile contributors on GitHub.</span></p>
+          </li>
+          <li>
+            <p class="layout"><a href="http://imager.io/">imager.io</a> <span>Brute-force image optimizer that finds
+            ideal compression settings.</span></p>
+          </li>
+          <li>
+            <p class="layout"><a href="https://colbyn.github.io/LegacyColbynDotCom/index.html">Legacy colbyn.com</a>
+            <span>The old version of the site; <strong>go here to see content that hasn't yet been moved
+            over</strong>.</span></p>
+          </li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h3 class="title">Personal</h3>
+        <ul>
+          <li>
+            <p class="layout"><a href="https://colbyn.github.io/school-notes-spring-2020/">My Beautiful Math Notes</a>
+            <span>Best on wide viewports.</span></p>
+          </li>
+          <li>
+            <p class="layout"><a href=
+            "https://colbyn.github.io/old-school-chem-notes/dev/chemistry-1010---fall-2021/index.html">My Experimental
+            Chemistry Notes</a> <span>From the root table of contents, open any topic to see freeform notes.</span></p>
+          </li>
+          <li>
+            <p class="layout"><a href="https://colbyn.github.io/tao-te-ching-book/">The Tao Te Ching</a> <span>A great
+            online resource however the design could be better.</span></p>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer class="wip-banner">
+    <p class="large">🚧 Work In Progress 🚧</p>
+    <p class="extra">I'm building out this site in conjunction with my new <a href=
+    "http://github.com/SuperSwiftDev/WebCompiler">static site compiler</a>.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<bind path="host.id" as="id"></bind>
+
+<!--
+@component TabView
+-->
+<div data-component="TabView" id="{{id}}">
+    <aside>
+        <ol>
+            <enumerate path="content" as="item">
+                <bind path="item@data-key" as="key"></bind>
+                <bind path="item@data-label" as="label"></bind>
+                <li>
+                    <span><inject path="label"></inject></span>
+                </li>
+            </enumerate>
+        </ol>
+    </aside>
+    <div class="content">
+        <content></content>
+    </div>
+</div>

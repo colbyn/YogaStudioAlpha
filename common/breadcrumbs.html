@@ -1,0 +1,23 @@
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <enumerate path="breadcrumbs" as="breadcrumb">
+            <li>
+                <a href="{{breadcrumb.href}}"><span><inject path="breadcrumb.title"></inject></span></a>
+            </li>
+        </enumerate>
+    </ol>
+</nav>
+
+<style>
+    .breadcrumb {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .breadcrumb li + li::before {
+        content: "›";
+        color: #403d3d;
+    }
+</style>

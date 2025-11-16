@@ -1,0 +1,17 @@
+[project]
+template = "templates/default.html"
+output = "output"
+
+[[targets]]
+type = "production"
+id = "github-pages"
+output = "docs"
+
+# [[sources]]
+# input = "resume/**/*.html"
+# template = "templates/resume.html"
+
+[[sources]]
+input = "pages/**/*.html"
+template = "templates/default.html"
+strip_prefix = "pages/"
