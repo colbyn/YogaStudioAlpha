@@ -1,0 +1,50 @@
+:root {
+    --theme-color-primary: #fdb18e;
+    --site-header-height: 160px;
+    --theme-banner-color-primary: #ffffffc7;
+}
+
+html,
+body {
+    background-color: #fff;
+}
+
+
+/* @media screen and (prefers-color-scheme: dark) {
+    :root {
+        --landing-bg-color: #191919;
+        --landing-fg-color: #2925257a;
+        --landing-border-color: #2f5066;
+    }
+} */
+
+
+
+
+/* Scroll lock */
+:root.nav-open {
+    overflow: hidden;
+    /* desktop + Android */
+    overscroll-behavior: none;
+}
+
+body.scroll-lock {
+    position: fixed;
+    top: var(--lock-top, 0);
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* prefer safe viewport; keep a fallback */
+    height: 100svh;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+    touch-action: none;
+
+}
+
+/* Optional: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    nav.site-full-width {
+        transition: none !important;
+    }
+}
