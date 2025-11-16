@@ -1,5 +1,5 @@
 .hero {
-    background-image: url(../../assets/images/building-in-a-sunny-garden-in-california.jpg);
+    background-image: url(../../assets/images/classic-building-with-plant-on-wall.jpg);
     display: flex;
     height: 100dvh;
     width: 100%;
@@ -77,7 +77,7 @@
     background-color: #00000099;
     border-top: 1px solid #fff;
 
-    background-color: #fff3e6ba;
+    background-color: var(--theme-banner-color-primary);
     backdrop-filter: blur(5px);
     border-top: 1px solid #ffffff69;
     box-shadow: 0px -1px 4px 1px #000000a3;
@@ -85,6 +85,6 @@
 
 .hero .banner p {
     text-shadow: unset;
-    color: #202020;
-    font-weight: 200;
+    color: #39464c;
+    font-weight: 400;
 }
