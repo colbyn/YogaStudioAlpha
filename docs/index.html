@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Colbyn Wadman – Systems‑oriented Software & Tooling</title>
-  <meta name="description" content="Colbyn Wadman's personal websites">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Colbyn Wadman">
-  <meta property="og:description" content=
-  "Deep‑tech projects in ML image coding, custom note‑tools, compilers, and functional type systems.">
-  <meta property="og:url" content="https://colbyn.com/">
+  <title>Canvas & Stone</title>
+  <meta name="description" content="TODO">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,211 +20,228 @@
   </style>
   <link rel="stylesheet" href="templates/default/typography.css">
   <link rel="stylesheet" href="templates/default/layout.css">
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Colbyn Wadman",
-  "url": "https://colbyn.com",
-  "jobTitle": "Software Developer",
-  "description": "Software developer building fast, low-level tools for media processing, compilers, and developer workflows — with a focus on performance, clarity, and code quality.",
-  "sameAs": [
-    "https://github.com/colbyn",
-    "https://www.youtube.com/@colbyn-wadman",
-    "https://imager.io",
-    "https://medium.com/@colbyn"
-  ],
-  "knowsAbout": [
-    "Functional programming and type systems",
-    "Neural image compression and codec design",
-    "Minimal note-taking systems and cognitive tools",
-    "Compiler construction and program transformations",
-    "Rust, Swift, and type-driven system design",
-    "Web semantics and interface minimalism"
-  ],
-  "knowsLanguage": ["en"],
-  "hasPart": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Imager",
-      "alternateName": "imager.io",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Cross-platform",
-      "url": "https://imager.io",
-      "codeRepository": "https://github.com/imager-io",
-      "creator": {
-        "@type": "Person",
-        "name": "Colbyn Wadman",
-        "url": "https://colbyn.com"
-      },
-      "maintainer": {
-        "@type": "Person",
-        "name": "Colbyn Wadman",
-        "url": "https://colbyn.com"
-      },
-      "description": "A modular, Rust-based image optimization platform with ML-guided visual metrics, outperforming commercial tools like kraken.io. Features native Node.js bindings, CLI tooling, and deep integration with FFmpeg, WebP, x264, and VMAF.",
-      "programmingLanguage": ["Rust", "JavaScript"],
-      "softwareVersion": "1.0",
-      "featureList": [
-        "Rust encoder with machine-learned perceptual metrics",
-        "Node.js bindings via Rust FFI",
-        "Benchmark suite outperforming kraken.io and jpegmini",
-        "Support for WebP, JPEG, x264, and VMAF-based evaluation"
-      ],
-      "license": "https://opensource.org/licenses/MIT",
-      "isAccessibleForFree": true
-    }
-  ],
-  "subjectOf": [
-    {
-      "@type": "Article",
-      "name": "Modern Image Optimization for 2020: Issues, Solutions, and Open Source",
-      "author": {
-        "@type": "Person",
-        "name": "Colbyn Wadman"
-      },
-      "url": "https://medium.com/@colbyn/modern-image-optimization-for-2020-issues-solutions-and-open-source-solutions-543af00e3e51",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Medium"
-      }
-    }
-  ]
-  }
-  </script>
   <link rel="stylesheet" type="text/css" href="pages/index.css">
+  <link rel="stylesheet" type="text/css" href="fragments/homepage/hero.css">
   <style>
-  header.site-banner {
-    padding: 1rem 0rem;
-    border: 1px solid;
-    border-color: var(--landing-border-color);
-    background-color: var(--landing-fg-color);
-    color: #6d6d6d;
-    margin: 0 var(--landing-margin-length);
-  }
-
-  header.site-banner h1 {
-    color: inherit;
-    font-weight: 900;
-    letter-spacing: 1rem;
-    text-align: center;
-    display: flex;
-    overflow-wrap: anywhere;
+  #site-header {
+    flex-direction: column;
+    gap: 0;
     justify-content: center;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff3e6ba;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #ffffff69;
+    box-shadow: 0px 1px 4px 1px #000000a3;
 
-    font-size: clamp(4rem, 12vw + 1rem, 10rem);
-    letter-spacing: clamp(0.05em, 1vw, 0.6em);
+    height: var(--site-header-height);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    align-content: space-between;
+  }
+  #site-header .branding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding: 1rem 1rem;
+  }
+  #site-header .menu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #ffffff;
+  }
+  #site-header nav {
+    display: contents;
+  }
+  #site-header ul {
+    display: contents;
+  }
+  #site-header ul li {
+    margin: 0;
+  }
+  #site-header .utility {
+    display: contents;
+  }
+  #site-header .item {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    color: inherit;
+    color: #2c2c2c;
+  }
+  #site-header .menu .item {
+    padding: 1rem;
+  }
+  #site-header h1.item {
+    font-size: 1.7rem;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #000;
+  }
+  #site-header .tagline {
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #484848;
+  }
+  #site-header a {
+    text-decoration: none;
+    color: inherit;
   }
   </style>
   <style>
-  footer.wip-banner {
+  #site-footer nav {
     display: flex;
-    flex-direction: column;
-    padding: 1rem 0rem;
-    border: 0.5px solid;
-    border-color: var(--landing-border-color);
-    background-color: var(--landing-fg-color);
-    color: #5f4c4c;
-    margin: 0 var(--landing-margin-length);
-    margin-top: auto;
-    padding: 0.5rem;
-  }
-
-  footer.wip-banner p {
-    color: inherit;
-  }
-
-  footer.wip-banner p.large {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: clamp(1.5rem, 2vw + 1.0rem, 4rem);
-    white-space-collapse: break-spaces;
-  }
-
-  footer.wip-banner p.extra {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  @media screen and (prefers-color-scheme: light) {
-    footer.wip-banner p.large {
-        opacity: 0.7;
-    }
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    footer.wip-banner {
-        color: #adacac;
-    }
+    gap: 1rem;
+    justify-content: space-around;
   }
   </style>
 </head>
 <body>
-  <header class="site-banner">
-    <h1>Colbyn Wadman</h1>
+  <header id="site-header">
+    <div class="branding">
+      <h1 class="item"><a href="index.html">Canvas & Stone</a></h1>
+      <p class="tagline">Discover Wellness</p>
+    </div>
+    <div class="menu">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li class="item">
+            <a href="#">Spa</a>
+          </li>
+          <li class="item">
+            <a href="#">Salon</a>
+          </li>
+          <li class="item">
+            <a href="#">Fitness</a>
+          </li>
+          <li class="item">
+            <a href="#">Recovery</a>
+          </li>
+          <li class="item">
+            <a href="#">Cafe</a>
+          </li>
+          <li class="item">
+            <a href="#">Events</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="utility">
+        <a class="button item" href="#">Mobile App</a> <a class="phone item" href="tel:+1-000-000-0000">(000)
+        000-0000</a>
+      </div>
+    </div>
   </header>
-  <section class="wrapper">
-    <article>
-      <h2 class="title">Contact</h2>
-      <ul class="contact-options">
-        <li class="contact"><code>hello@colbyn.com</code></li>
-        <li class="contact">
-          <a href="https://colbyn.com">colbyn.com</a>
-        </li>
-        <li class="contact"><code>801-367-4487</code></li>
-        <li class="contact">
-          <a href="https://github.com/colbyn">github.com/colbyn</a>
-        </li>
-      </ul>
-    </article>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="content">
+      <header>
+        <h2 id="hero-heading" class="heading">Spa, Salon, Fitness & Recovery</h2>
+      </header>
+      <div class="banner">
+        <p class="slug">Canvas & Stone brings everything under one roof—massages, hair, hot classes, cold plunge, and a
+        café to refuel when you’re done.</p>
+      </div>
+    </div>
   </section>
-  <main>
-    <section class="wrapper">
-      <h2 class="title">Quick Links</h2>
-      <article class="panel">
-        <h3 class="title">Professional</h3>
+  <main></main>
+  <footer id="site-footer">
+    <nav aria-label="Footer">
+      <section>
+        <h2>Studios</h2>
         <ul>
           <li>
-            <p class="layout"><a href="https://github.com/colbyn">github.com/colbyn</a> <span>My GitHub profile. In
-            2019 I was among the top percentile contributors on GitHub.</span></p>
+            <a href="#">Spa</a>
           </li>
           <li>
-            <p class="layout"><a href="http://imager.io/">imager.io</a> <span>Brute-force image optimizer that finds
-            ideal compression settings.</span></p>
+            <a href="#">Salon</a>
           </li>
           <li>
-            <p class="layout"><a href="https://colbyn.github.io/LegacyColbynDotCom/index.html">Legacy colbyn.com</a>
-            <span>The old version of the site; <strong>go here to see content that hasn't yet been moved
-            over</strong>.</span></p>
+            <a href="#">Fitness</a>
+          </li>
+          <li>
+            <a href="#">Recovery</a>
+          </li>
+          <li>
+            <a href="#">Cafe</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
           </li>
         </ul>
-      </article>
-      <article class="panel">
-        <h3 class="title">Personal</h3>
+      </section>
+      <section>
+        <h2>Info</h2>
         <ul>
           <li>
-            <p class="layout"><a href="https://colbyn.github.io/school-notes-spring-2020/">My Beautiful Math Notes</a>
-            <span>Best on wide viewports.</span></p>
+            <a href="#">Contact/Address</a>
           </li>
           <li>
-            <p class="layout"><a href=
-            "https://colbyn.github.io/old-school-chem-notes/dev/chemistry-1010---fall-2021/index.html">My Experimental
-            Chemistry Notes</a> <span>From the root table of contents, open any topic to see freeform notes.</span></p>
+            <a href="#">Tour Brick Canvas</a>
           </li>
-          <li>
-            <p class="layout"><a href="https://colbyn.github.io/tao-te-ching-book/">The Tao Te Ching</a> <span>A great
-            online resource however the design could be better.</span></p>
+          <li class="phone">
+            <a href="tel:+1-000-000-0000">(000) 000-0000</a>
+          </li>
+          <li class="button">
+            <a href="#">Mobile App</a>
           </li>
         </ul>
-      </article>
-    </section>
-  </main>
-  <footer class="wip-banner">
-    <p class="large">🚧 Work In Progress 🚧</p>
-    <p class="extra">I'm building out this site in conjunction with my new <a href=
-    "http://github.com/SuperSwiftDev/WebCompiler">static site compiler</a>.</p>
+      </section>
+      <section>
+        <h2>Other</h2>
+        <ul>
+          <li>
+            <a href="#">Gift Cards</a>
+          </li>
+          <li>
+            <a href="#">Memberships & Rates</a>
+          </li>
+          <li>
+            <a href="#">Best of Utah Valley</a>
+          </li>
+          <li>
+            <a href="#">26&amp;2 Yoga Teacher Training</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Social</h2>
+        <ul>
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
   </footer>
 </body>
 </html>
