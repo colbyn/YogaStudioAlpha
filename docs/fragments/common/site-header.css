@@ -126,6 +126,10 @@
 /* ------------------------------------------------------------------------- */
 
 @media screen and (max-width: 960px) {
+    :root {
+        --site-header-height: 100px;
+    }
+    
     #site-header {
         display: grid;
         grid-template-columns: 1fr max-content;
@@ -142,8 +146,21 @@
     #menu-btn {
         margin: 1rem;
     }
+}
 
+@media screen and (max-height: 400px) {
     :root {
-        --site-header-height: 100px;
+        --site-header-height: 70px;
+    }
+
+    #site-header .branding {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    #menu-btn {
+        margin: 10px;
     }
 }
