@@ -19,14 +19,15 @@
     /* disabled when closed */
     pointer-events: none;
 
-    background-image: url(../../assets/images/person-facing-background.jpg);
-    background-position: center;
+    /* background-image: url(../../assets/images/person-facing-background.jpg);
+    background-position: center; */
 
     /* background-image: url(../../assets/images/beautiful-woman-exercising.jpg);
     background-position: right center; */
 
     background-image: url(../../assets/images/beautiful-woman-exercising-flipped.jpg);
-    background-position: center;
+    background-position-x: left;
+    background-position-y: top;
 }
 
 #site-nav-full-width.open {
@@ -97,4 +98,15 @@
 #site-nav-full-width ul li a {
     text-decoration: none;
     color: inherit;
+}
+
+/* ------------------------------------------------------------------------- */
+/* DESKTOP DISPLAY */
+/* ------------------------------------------------------------------------- */
+
+@media (width > 600px) and (height > 500px) {
+    #site-nav-full-width {
+        background-image: url(../../assets/images/beautiful-woman-exercising-786787.jpg);
+        background-position: center;
+    }
 }
