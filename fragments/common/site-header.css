@@ -164,3 +164,12 @@
         margin: 10px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    :root {
+        --site-header-height: 100px;
+    }
+    #site-header p {
+        display: none;
+    }
+}
