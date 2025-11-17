@@ -129,7 +129,7 @@
     display: none;
 }
 
-@media (width <= 960px) {
+@media (width <= 960px), (height <= 600px) {
     :root {
         --site-header-height: 100px;
     }
@@ -153,6 +153,7 @@
 
     #menu-btn {
         margin: 1rem;
+        color: red;
     }
 
     #site-header .desktop {
