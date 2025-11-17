@@ -19,6 +19,8 @@
     align-content: space-between;
 
     background-color: var(--theme-banner-color-primary);
+
+    position: fixed;
 }
 
 #site-header .branding {
@@ -80,13 +82,15 @@
     padding: 1rem;
 }
 
-#site-header h1.item {
+#site-header .headline {
     font-size: 1.7rem;
     font-family: var(--font-sans);
     font-weight: 300;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #000;
+    text-align: center;
+    width: 100%;
 }
 
 #site-header .tagline {

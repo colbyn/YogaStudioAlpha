@@ -1,4 +1,4 @@
-.hero {
+#hero {
     background-image: url(../../assets/images/classic-building-with-plant-on-wall.jpg);
     display: flex;
     height: 100dvh;
@@ -13,15 +13,15 @@
     box-shadow: 0 2px 4px 2px #000000b1;
     /* border-bottom: 1px solid #ffffff2e; */
     margin-bottom: 4rem;
-    margin-top: calc(var(--site-header-height) * -1);
 }
 
-.hero .content {
+#hero .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100% + var(--site-header-height));
-    margin-top: var(--site-header-height);
+    /* height: calc(100% + var(--site-header-height)); */
+    /* margin-top: var(--site-header-height); */
+    height: 100%;
     justify-content: center;
     gap: 2rem;
 
@@ -31,7 +31,7 @@
     width: 100%;
 }
 
-.hero p, .hero h1, .hero h2, .hero a {
+#hero p, #hero h1, #hero h2, #hero a {
     color: #ffffff;
     font-size: 2rem;
     font-weight: 700;
@@ -40,12 +40,12 @@
     font-family: var(--font-serif);
 }
 
-.hero header {
+#hero header {
     padding: 1rem;
     padding-bottom: 0;
 }
 
-.hero .banner {
+#hero .banner {
     width: 100%;
     padding: 1rem;
     background-color: #00000099;
@@ -57,13 +57,13 @@
     box-shadow: 0px -1px 4px 1px #000000a3;
 }
 
-.hero .heading {
+#hero .heading {
     /* font-size: clamp(20px, 10vw, 6rem); */
     font-size: clamp(12px, calc(6vw + 20px), 4rem);
     font-weight: 900;
 }
 
-.hero .slug {
+#hero .slug {
     color: #fff;
     font-size: clamp(16px, 1.8vw, 4rem);
     font-weight: 600;
@@ -81,11 +81,11 @@
 /* ======== */
 
 @media (600px >= width), (600px >= height) {
-    .hero .heading {
+    #hero .heading {
         font-size: 3rem;
         font-weight: 600;
     }
-    .hero .slug {
+    #hero .slug {
         font-size: 16px;
         font-weight: 300;
     }
