@@ -82,10 +82,18 @@
 /* MOBILE   */
 /* ======== */
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 400px) {
     .hero .heading {
         font-size: 3rem;
         font-weight: 600;
+    }
+    .hero .slug {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: var(--font-sans);
+        padding: 0;
+        margin: 0;
     }
 }
 
