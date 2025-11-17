@@ -73,7 +73,7 @@
   font-weight: 400;
 }
 
-@media screen and (height <= 400px) {
+@media screen and (height <= 600px) {
   .hero .heading {
     font-size: 3rem;
     font-weight: 600;

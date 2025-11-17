@@ -82,9 +82,10 @@
 /* MOBILE   */
 /* ======== */
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 600px) {
     .hero .heading {
         font-size: 3rem;
         font-weight: 600;
     }
 }
+
