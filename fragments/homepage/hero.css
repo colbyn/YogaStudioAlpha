@@ -45,30 +45,18 @@
 }
 
 .hero .heading {
-    font-size: clamp(20px, 10vw, 6rem);
+    /* font-size: clamp(20px, 10vw, 6rem); */
+    font-size: clamp(12px, calc(6vw + 20px), 4rem);
     font-weight: 900;
 }
 
 .hero .slug {
     color: #fff;
-    font-size: clamp(18px, 2.5vw, 4rem);
+    font-size: clamp(12px, 2.5vw, 4rem);
     font-weight: 600;
     font-family: var(--font-sans);
     padding: 0;
     margin: 0;
-}
-
-.hero .cta {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.hero .cta a {
-    font-size: 2rem;
-    font-family: var(--font-sans);
 }
 
 .hero .banner {
@@ -87,4 +75,16 @@
     text-shadow: unset;
     color: #39464c;
     font-weight: 400;
+}
+
+
+/* ======== */
+/* MOBILE   */
+/* ======== */
+
+@media screen and (max-height: 400px) {
+    .hero .heading {
+        font-size: 3rem;
+        font-weight: 600;
+    }
 }
