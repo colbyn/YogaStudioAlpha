@@ -1,3 +1,12 @@
+#site-nav-full-width {
+    --background-image-cover: var(--background-image-cover-mobile);
+    --background-image-cover-mobile: url(../../assets/images/beautiful-woman-exercising-flipped.jpg);
+    --background-image-cover-desktop: url(../../assets/images/beautiful-woman-exercising-786787.jpg);
+
+    /* --background-image-cover-mobile: url(../../assets/images/a-woman-exercising-with-a-barbell-at-the-gym.jpg); */
+    /* --background-image-cover-desktop: url(../../assets/images/a-woman-exercising-with-a-barbell-at-the-gym.jpg); */
+}
+
 /* ------------------------------------------------------------------------- */
 /* OUTER WRAPPER (slides); sits above header */
 /* ------------------------------------------------------------------------- */
@@ -25,7 +34,7 @@
     /* background-image: url(../../assets/images/beautiful-woman-exercising.jpg);
     background-position: right center; */
 
-    background-image: url(../../assets/images/beautiful-woman-exercising-flipped.jpg);
+    background-image: var(--background-image-cover-mobile);
     background-position-x: left;
     background-position-y: top;
 }
@@ -91,7 +100,6 @@
     margin: 0;
     font-size: 1.5rem;
     font-weight: 400;
-    text-shadow: 0 0 2px #000, -3px -1px 4px #6f5430b0;
     color: #fff;
 }
 
@@ -100,13 +108,17 @@
     color: inherit;
 }
 
+#site-nav-full-width .item {
+    text-shadow: 0 0 2px #000, -3px -1px 4px #6f5430b0;
+}
+
 /* ------------------------------------------------------------------------- */
 /* DESKTOP DISPLAY */
 /* ------------------------------------------------------------------------- */
 
 @media (width > 600px) and (height > 500px) {
     #site-nav-full-width {
-        background-image: url(../../assets/images/beautiful-woman-exercising-786787.jpg);
+        background-image: var(--background-image-cover-desktop);
         background-position: center;
     }
 }
