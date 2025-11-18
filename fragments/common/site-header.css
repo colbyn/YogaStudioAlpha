@@ -152,7 +152,7 @@
     }
 
     #site-header .branding {
-        padding-left: 4.5rem;
+        padding-left: 3.7rem;
     }
 
     #menu-btn {
@@ -201,3 +201,8 @@
     }
 }
 
+@media (400px >= width) {
+    #site-header .branding {
+        padding: 0;
+    }
+}
