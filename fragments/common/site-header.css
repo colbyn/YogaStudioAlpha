@@ -201,7 +201,7 @@
     }
 }
 
-@media (400px >= width) {
+@media (600px >= width) {
     #site-header .branding {
         padding: 0;
     }
